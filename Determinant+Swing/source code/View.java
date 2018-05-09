@@ -3,14 +3,14 @@ package lunmijo.determinant.matrix;
  *
  * @author Lunmijo
  * Created: April, 28, 2018
- * Last modified: May, 1, 2018
+ * Last modified: May, 8, 2018
  */
-public class MatrixView extends javax.swing.JFrame {
+public class View extends javax.swing.JFrame {
 
     /**
      * Creates new form MatrixJFrame
      */
-    public MatrixView() {
+    public View() {
         initComponents();
     }
 
@@ -95,6 +95,7 @@ public class MatrixView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Matrix determinant");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
         matrixSize.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2x2", "3x3", "4x4", "5x5", "6x6", "7x7", "8x8" }));
@@ -764,7 +765,8 @@ public class MatrixView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public int get_matrix_size() {
+   
+    public int getMatrixSize() {
         if (matrixSize.getSelectedItem() == "2x2") {
             return 2;
         }
@@ -790,701 +792,1096 @@ public class MatrixView extends javax.swing.JFrame {
             return 0;
         }
     }
-    public double get_determinant() {
-        int size = this.get_matrix_size();
+    
+    public void setMatrixSize(int size) {
         matrix = new double[size][size];
-        switch (size) {
+    }
+    
+    final public double[][] getMatrix() {
+        return matrix;
+    }
+    public void setElementMatrix(int rowPosition, int columnPosition, double value) {
+        matrix[rowPosition][columnPosition] = value;
+    }
+    final public double getA11() {
+        return "".equals(a11.getText()) ? 0 : Double.parseDouble((a11.getText()));
+    }
+    final public double getA12() {
+        return "".equals(a12.getText()) ? 0 : Double.parseDouble((a12.getText()));
+    }
+    final public double getA13() {
+        return "".equals(a13.getText()) ? 0 : Double.parseDouble((a13.getText()));
+    }
+    final public double getA14() {
+        return "".equals(a14.getText()) ? 0 : Double.parseDouble((a14.getText()));
+    }
+    final public double getA15() {
+        return "".equals(a15.getText()) ? 0 : Double.parseDouble((a15.getText()));
+    }
+    final public double getA16() {
+        return "".equals(a16.getText()) ? 0 : Double.parseDouble((a16.getText()));
+    }
+    final public double getA17() {
+        return "".equals(a17.getText()) ? 0 : Double.parseDouble((a17.getText()));
+    }
+    final public double getA18() {
+        return "".equals(a18.getText()) ? 0 : Double.parseDouble((a18.getText()));
+    }
+    final public double getA21() {
+        return "".equals(a21.getText()) ? 0 : Double.parseDouble((a21.getText()));
+    }
+    final public double getA22() {
+        return "".equals(a22.getText()) ? 0 : Double.parseDouble((a22.getText()));
+    }
+    final public double getA23() {
+        return "".equals(a23.getText()) ? 0 : Double.parseDouble((a23.getText()));
+    }
+    final public double getA24() {
+        return "".equals(a24.getText()) ? 0 : Double.parseDouble((a24.getText()));
+    }
+    final public double getA25() {
+        return "".equals(a25.getText()) ? 0 : Double.parseDouble((a25.getText()));
+    }
+    final public double getA26() {
+        return "".equals(a26.getText()) ? 0 : Double.parseDouble((a26.getText()));
+    }
+    final public double getA27() {
+        return "".equals(a27.getText()) ? 0 : Double.parseDouble((a27.getText()));
+    }
+    final public double getA28() {
+        return "".equals(a28.getText()) ? 0 : Double.parseDouble((a28.getText()));
+    }
+    final public double getA31() {
+        return "".equals(a31.getText()) ? 0 : Double.parseDouble((a31.getText()));
+    }
+    final public double getA32() {
+        return "".equals(a32.getText()) ? 0 : Double.parseDouble((a32.getText()));
+    }
+    final public double getA33() {
+        return "".equals(a33.getText()) ? 0 : Double.parseDouble((a33.getText()));
+    }
+    final public double getA34() {
+        return "".equals(a34.getText()) ? 0 : Double.parseDouble((a34.getText()));
+    }
+    final public double getA35() {
+        return "".equals(a35.getText()) ? 0 : Double.parseDouble((a35.getText()));
+    }
+    final public double getA36() {
+        return "".equals(a36.getText()) ? 0 : Double.parseDouble((a36.getText()));
+    }
+    final public double getA37() {
+        return "".equals(a37.getText()) ? 0 : Double.parseDouble((a37.getText()));
+    }
+    final public double getA38() {
+        return "".equals(a38.getText()) ? 0 : Double.parseDouble((a38.getText()));
+    }
+    final public double getA41() {
+        return "".equals(a41.getText()) ? 0 : Double.parseDouble((a41.getText()));
+    }
+    final public double getA42() {
+        return "".equals(a42.getText()) ? 0 : Double.parseDouble((a41.getText()));
+    }
+    final public double getA43() {
+        return "".equals(a43.getText()) ? 0 : Double.parseDouble((a43.getText()));
+    }
+    final public double getA44() {
+        return "".equals(a44.getText()) ? 0 : Double.parseDouble((a44.getText()));
+    }
+    final public double getA45() {
+        return "".equals(a45.getText()) ? 0 : Double.parseDouble((a45.getText()));
+    }
+    final public double getA46() {
+        return "".equals(a46.getText()) ? 0 : Double.parseDouble((a46.getText()));
+    }
+    final public double getA47() {
+        return "".equals(a47.getText()) ? 0 : Double.parseDouble((a47.getText()));
+    }
+    final public double getA48() {
+        return "".equals(a48.getText()) ? 0 : Double.parseDouble((a48.getText()));
+    }
+    final public double getA51() {
+        return "".equals(a51.getText()) ? 0 : Double.parseDouble((a51.getText()));
+    }
+    final public double getA52() {
+        return "".equals(a52.getText()) ? 0 : Double.parseDouble((a52.getText()));
+    }
+    final public double getA53() {
+        return "".equals(a53.getText()) ? 0 : Double.parseDouble((a53.getText()));
+    }
+    final public double getA54() {
+        return "".equals(a54.getText()) ? 0 : Double.parseDouble((a54.getText()));
+    }
+    final public double getA55() {
+        return "".equals(a55.getText()) ? 0 : Double.parseDouble((a55.getText()));
+    }
+    final public double getA56() {
+        return "".equals(a56.getText()) ? 0 : Double.parseDouble((a56.getText()));
+    }
+    final public double getA57() {
+        return "".equals(a57.getText()) ? 0 : Double.parseDouble((a57.getText()));
+    }
+    final public double getA58() {
+        return "".equals(a58.getText()) ? 0 : Double.parseDouble((a58.getText()));
+    }
+    final public double getA61() {
+        return "".equals(a61.getText()) ? 0 : Double.parseDouble((a61.getText()));
+    }
+    final public double getA62() {
+        return "".equals(a62.getText()) ? 0 : Double.parseDouble((a62.getText()));
+    }
+    final public double getA63() {
+        return "".equals(a63.getText()) ? 0 : Double.parseDouble((a63.getText()));
+    }
+    final public double getA64() {
+        return "".equals(a64.getText()) ? 0 : Double.parseDouble((a64.getText()));
+    }
+    final public double getA65() {
+        return "".equals(a65.getText()) ? 0 : Double.parseDouble((a65.getText()));
+    }
+    final public double getA66() {
+        return "".equals(a66.getText()) ? 0 : Double.parseDouble((a66.getText()));
+    }
+    final public double getA67() {
+        return "".equals(a67.getText()) ? 0 : Double.parseDouble((a67.getText()));
+    }
+    final public double getA68() {
+        return "".equals(a68.getText()) ? 0 : Double.parseDouble((a68.getText()));
+    }
+    final public double getA71() {
+        return "".equals(a71.getText()) ? 0 : Double.parseDouble((a71.getText()));
+    }
+    final public double getA72() {
+        return "".equals(a72.getText()) ? 0 : Double.parseDouble((a72.getText()));
+    }
+    final public double getA73() {
+        return "".equals(a73.getText()) ? 0 : Double.parseDouble((a73.getText()));
+    }
+    final public double getA74() {
+        return "".equals(a74.getText()) ? 0 : Double.parseDouble((a74.getText()));
+    }
+    final public double getA75() {
+        return "".equals(a75.getText()) ? 0 : Double.parseDouble((a75.getText()));
+    }
+    final public double getA76() {
+        return "".equals(a76.getText()) ? 0 : Double.parseDouble((a76.getText()));
+    }
+    final public double getA77() {
+        return "".equals(a77.getText()) ? 0 : Double.parseDouble((a77.getText()));
+    }
+    final public double getA78() {
+        return "".equals(a78.getText()) ? 0 : Double.parseDouble((a78.getText()));
+    }
+    final public double getA81() {
+        return "".equals(a81.getText()) ? 0 : Double.parseDouble((a81.getText()));
+    }
+    final public double getA82() {
+        return "".equals(a82.getText()) ? 0 : Double.parseDouble((a82.getText()));
+    }
+    final public double getA83() {
+        return "".equals(a83.getText()) ? 0 : Double.parseDouble((a83.getText()));
+    }
+    final public double getA84() {
+        return "".equals(a84.getText()) ? 0 : Double.parseDouble((a84.getText()));
+    }
+    final public double getA85() {
+        return "".equals(a85.getText()) ? 0 : Double.parseDouble((a85.getText()));
+    }
+    final public double getA86() {
+        return "".equals(a86.getText()) ? 0 : Double.parseDouble((a86.getText()));
+    }
+    final public double getA87() {
+        return "".equals(a87.getText()) ? 0 : Double.parseDouble((a87.getText()));
+    }
+    final public double getA88() {
+        return "".equals(a88.getText()) ? 0 : Double.parseDouble((a88.getText()));
+    }
+
+    private void matrixSizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matrixSizeActionPerformed
+        switch (this.getMatrixSize()) {
             case 2:
-                matrix = new double[2][2];
-                matrix[0][0] = "".equals(a11.getText()) ? 0 : Double.parseDouble(a11.getText());
-                matrix[0][1] = "".equals(a12.getText()) ? 0 : Double.parseDouble(a12.getText());
-                matrix[1][0] = "".equals(a21.getText()) ? 0 : Double.parseDouble(a21.getText());
-                matrix[1][1] = "".equals(a22.getText()) ? 0 : Double.parseDouble(a22.getText());
+                a11.setText("");
+                a12.setText("");
+                a21.setText("");
+                a22.setText("");
+                a13.setEnabled(false);
+                a13.setText("");
+                a14.setEnabled(false);
+                a14.setText("");
+                a15.setEnabled(false);
+                a15.setText("");
+                a16.setEnabled(false);
+                a16.setText("");
+                a17.setEnabled(false);
+                a17.setText("");
+                a18.setEnabled(false);
+                a18.setText("");
+                a23.setEnabled(false);
+                a23.setText("");
+                a24.setEnabled(false);
+                a24.setText("");
+                a25.setEnabled(false);
+                a25.setText("");
+                a26.setEnabled(false);
+                a26.setText("");
+                a27.setEnabled(false);
+                a27.setText("");
+                a28.setEnabled(false);
+                a28.setText("");
+                a31.setEnabled(false);
+                a31.setText("");
+                a32.setEnabled(false);
+                a32.setText("");
+                a33.setEnabled(false);
+                a33.setText("");
+                a34.setEnabled(false);
+                a34.setText("");
+                a35.setEnabled(false);
+                a35.setText("");
+                a36.setEnabled(false);
+                a36.setText("");
+                a37.setEnabled(false);
+                a37.setText("");
+                a38.setEnabled(false);
+                a38.setText("");
+                a41.setEnabled(false);
+                a41.setText("");
+                a42.setEnabled(false);
+                a42.setText("");
+                a43.setEnabled(false);
+                a43.setText("");
+                a44.setEnabled(false);
+                a44.setText("");
+                a45.setEnabled(false);
+                a45.setText("");
+                a46.setEnabled(false);
+                a46.setText("");
+                a47.setEnabled(false);
+                a47.setText("");
+                a48.setEnabled(false);
+                a48.setText("");
+                a51.setEnabled(false);
+                a51.setText("");
+                a52.setEnabled(false);
+                a52.setText("");
+                a53.setEnabled(false);
+                a53.setText("");
+                a54.setEnabled(false);
+                a54.setText("");
+                a55.setEnabled(false);
+                a55.setText("");
+                a56.setEnabled(false);
+                a56.setText("");
+                a57.setEnabled(false);
+                a57.setText("");
+                a58.setEnabled(false);
+                a58.setText("");
+                a61.setEnabled(false);
+                a61.setText("");
+                a62.setEnabled(false);
+                a62.setText("");
+                a63.setEnabled(false);
+                a63.setText("");
+                a64.setEnabled(false);
+                a64.setText("");
+                a65.setEnabled(false);
+                a65.setText("");
+                a66.setEnabled(false);
+                a66.setText("");
+                a67.setEnabled(false);
+                a67.setText("");
+                a68.setEnabled(false);
+                a68.setText("");
+                a71.setEnabled(false);
+                a71.setText("");
+                a72.setEnabled(false);
+                a72.setText("");
+                a73.setEnabled(false);
+                a73.setText("");
+                a74.setEnabled(false);
+                a74.setText("");
+                a75.setEnabled(false);
+                a75.setText("");
+                a76.setEnabled(false);
+                a76.setText("");
+                a77.setEnabled(false);
+                a77.setText("");
+                a78.setEnabled(false);
+                a78.setText("");
+                a81.setEnabled(false);
+                a81.setText("");
+                a82.setEnabled(false);
+                a82.setText("");
+                a83.setEnabled(false);
+                a83.setText("");
+                a84.setEnabled(false);
+                a84.setText("");
+                a85.setEnabled(false);
+                a85.setText("");
+                a86.setEnabled(false);
+                a86.setText("");
+                a87.setEnabled(false);
+                a87.setText("");
+                a88.setEnabled(false);
+                a88.setText("");
                 break;
             case 3:
-                matrix = new double[3][3];
-                matrix[0][0] = "".equals(a11.getText()) ? 0 : Double.parseDouble(a11.getText());
-                matrix[0][1] = "".equals(a12.getText()) ? 0 : Double.parseDouble(a12.getText());
-                matrix[0][2] = "".equals(a13.getText()) ? 0 : Double.parseDouble(a13.getText());
-                matrix[1][0] = "".equals(a21.getText()) ? 0 : Double.parseDouble(a21.getText());
-                matrix[1][1] = "".equals(a22.getText()) ? 0 : Double.parseDouble(a22.getText());
-                matrix[1][2] = "".equals(a23.getText()) ? 0 : Double.parseDouble(a23.getText());
-                matrix[2][0] = "".equals(a31.getText()) ? 0 : Double.parseDouble(a31.getText());
-                matrix[2][1] = "".equals(a32.getText()) ? 0 : Double.parseDouble(a32.getText());
-                matrix[2][2] = "".equals(a33.getText()) ? 0 : Double.parseDouble(a33.getText());
+                a11.setText("");
+                a12.setText("");
+                a21.setText("");
+                a22.setText("");
+                a13.setEnabled(true);
+                a13.setText("");
+                a14.setEnabled(false);
+                a14.setText("");
+                a15.setEnabled(false);
+                a15.setText("");
+                a16.setEnabled(false);
+                a16.setText("");
+                a17.setEnabled(false);
+                a17.setText("");
+                a18.setEnabled(false);
+                a18.setText("");
+                a23.setEnabled(true);
+                a23.setText("");
+                a24.setEnabled(false);
+                a24.setText("");
+                a25.setEnabled(false);
+                a25.setText("");
+                a26.setEnabled(false);
+                a26.setText("");
+                a27.setEnabled(false);
+                a27.setText("");
+                a28.setEnabled(false);
+                a28.setText("");
+                a31.setEnabled(true);
+                a31.setText("");
+                a32.setEnabled(true);
+                a32.setText("");
+                a33.setEnabled(true);
+                a33.setText("");
+                a34.setEnabled(false);
+                a34.setText("");
+                a35.setEnabled(false);
+                a35.setText("");
+                a36.setEnabled(false);
+                a36.setText("");
+                a37.setEnabled(false);
+                a37.setText("");
+                a38.setEnabled(false);
+                a38.setText("");
+                a41.setEnabled(false);
+                a41.setText("");
+                a42.setEnabled(false);
+                a42.setText("");
+                a43.setEnabled(false);
+                a43.setText("");
+                a44.setEnabled(false);
+                a44.setText("");
+                a45.setEnabled(false);
+                a45.setText("");
+                a46.setEnabled(false);
+                a46.setText("");
+                a47.setEnabled(false);
+                a47.setText("");
+                a48.setEnabled(false);
+                a48.setText("");
+                a51.setEnabled(false);
+                a51.setText("");
+                a52.setEnabled(false);
+                a52.setText("");
+                a53.setEnabled(false);
+                a53.setText("");
+                a54.setEnabled(false);
+                a54.setText("");
+                a55.setEnabled(false);
+                a55.setText("");
+                a56.setEnabled(false);
+                a56.setText("");
+                a57.setEnabled(false);
+                a57.setText("");
+                a58.setEnabled(false);
+                a58.setText("");
+                a61.setEnabled(false);
+                a61.setText("");
+                a62.setEnabled(false);
+                a62.setText("");
+                a63.setEnabled(false);
+                a63.setText("");
+                a64.setEnabled(false);
+                a64.setText("");
+                a65.setEnabled(false);
+                a65.setText("");
+                a66.setEnabled(false);
+                a66.setText("");
+                a67.setEnabled(false);
+                a67.setText("");
+                a68.setEnabled(false);
+                a68.setText("");
+                a71.setEnabled(false);
+                a71.setText("");
+                a72.setEnabled(false);
+                a72.setText("");
+                a73.setEnabled(false);
+                a73.setText("");
+                a74.setEnabled(false);
+                a74.setText("");
+                a75.setEnabled(false);
+                a75.setText("");
+                a76.setEnabled(false);
+                a76.setText("");
+                a77.setEnabled(false);
+                a77.setText("");
+                a78.setEnabled(false);
+                a78.setText("");
+                a81.setEnabled(false);
+                a81.setText("");
+                a82.setEnabled(false);
+                a82.setText("");
+                a83.setEnabled(false);
+                a83.setText("");
+                a84.setEnabled(false);
+                a84.setText("");
+                a85.setEnabled(false);
+                a85.setText("");
+                a86.setEnabled(false);
+                a86.setText("");
+                a87.setEnabled(false);
+                a87.setText("");
+                a88.setEnabled(false);
+                a88.setText("");
                 break;
             case 4:
-                matrix = new double[4][4];
-                matrix[0][0] = "".equals(a11.getText()) ? 0 : Double.parseDouble(a11.getText());
-                matrix[0][1] = "".equals(a12.getText()) ? 0 : Double.parseDouble(a12.getText());
-                matrix[0][2] = "".equals(a13.getText()) ? 0 : Double.parseDouble(a13.getText());
-                matrix[0][3] = "".equals(a14.getText()) ? 0 : Double.parseDouble(a14.getText());
-                matrix[1][0] = "".equals(a21.getText()) ? 0 : Double.parseDouble(a21.getText());
-                matrix[1][1] = "".equals(a22.getText()) ? 0 : Double.parseDouble(a22.getText());
-                matrix[1][2] = "".equals(a23.getText()) ? 0 : Double.parseDouble(a23.getText());
-                matrix[1][3] = "".equals(a24.getText()) ? 0 : Double.parseDouble(a24.getText());
-                matrix[2][0] = "".equals(a31.getText()) ? 0 : Double.parseDouble(a31.getText());
-                matrix[2][1] = "".equals(a32.getText()) ? 0 : Double.parseDouble(a32.getText());
-                matrix[2][2] = "".equals(a33.getText()) ? 0 : Double.parseDouble(a33.getText());
-                matrix[2][3] = "".equals(a34.getText()) ? 0 : Double.parseDouble(a34.getText());
-                matrix[3][0] = "".equals(a41.getText()) ? 0 : Double.parseDouble(a41.getText());
-                matrix[3][1] = "".equals(a42.getText()) ? 0 : Double.parseDouble(a42.getText());
-                matrix[3][2] = "".equals(a43.getText()) ? 0 : Double.parseDouble(a43.getText());
-                matrix[3][3] = "".equals(a44.getText()) ? 0 : Double.parseDouble(a44.getText());
+                a11.setText("");
+                a12.setText("");
+                a21.setText("");
+                a22.setText("");
+                a13.setEnabled(true);
+                a13.setText("");
+                a14.setEnabled(true);
+                a14.setText("");
+                a15.setEnabled(false);
+                a15.setText("");
+                a16.setEnabled(false);
+                a16.setText("");
+                a17.setEnabled(false);
+                a17.setText("");
+                a18.setEnabled(false);
+                a18.setText("");
+                a23.setEnabled(true);
+                a23.setText("");
+                a24.setEnabled(true);
+                a24.setText("");
+                a25.setEnabled(false);
+                a25.setText("");
+                a26.setEnabled(false);
+                a26.setText("");
+                a27.setEnabled(false);
+                a27.setText("");
+                a28.setEnabled(false);
+                a28.setText("");
+                a31.setEnabled(true);
+                a31.setText("");
+                a32.setEnabled(true);
+                a32.setText("");
+                a33.setEnabled(true);
+                a33.setText("");
+                a34.setEnabled(true);
+                a34.setText("");
+                a35.setEnabled(false);
+                a35.setText("");
+                a36.setEnabled(false);
+                a36.setText("");
+                a37.setEnabled(false);
+                a37.setText("");
+                a38.setEnabled(false);
+                a38.setText("");
+                a41.setEnabled(true);
+                a41.setText("");
+                a42.setEnabled(true);
+                a42.setText("");
+                a43.setEnabled(true);
+                a43.setText("");
+                a44.setEnabled(true);
+                a44.setText("");
+                a45.setEnabled(false);
+                a45.setText("");
+                a46.setEnabled(false);
+                a46.setText("");
+                a47.setEnabled(false);
+                a47.setText("");
+                a48.setEnabled(false);
+                a48.setText("");
+                a51.setEnabled(false);
+                a51.setText("");
+                a52.setEnabled(false);
+                a52.setText("");
+                a53.setEnabled(false);
+                a53.setText("");
+                a54.setEnabled(false);
+                a54.setText("");
+                a55.setEnabled(false);
+                a55.setText("");
+                a56.setEnabled(false);
+                a56.setText("");
+                a57.setEnabled(false);
+                a57.setText("");
+                a58.setEnabled(false);
+                a58.setText("");
+                a61.setEnabled(false);
+                a61.setText("");
+                a62.setEnabled(false);
+                a62.setText("");
+                a63.setEnabled(false);
+                a63.setText("");
+                a64.setEnabled(false);
+                a64.setText("");
+                a65.setEnabled(false);
+                a65.setText("");
+                a66.setEnabled(false);
+                a66.setText("");
+                a67.setEnabled(false);
+                a67.setText("");
+                a68.setEnabled(false);
+                a68.setText("");
+                a71.setEnabled(false);
+                a71.setText("");
+                a72.setEnabled(false);
+                a72.setText("");
+                a73.setEnabled(false);
+                a73.setText("");
+                a74.setEnabled(false);
+                a74.setText("");
+                a75.setEnabled(false);
+                a75.setText("");
+                a76.setEnabled(false);
+                a76.setText("");
+                a77.setEnabled(false);
+                a77.setText("");
+                a78.setEnabled(false);
+                a78.setText("");
+                a81.setEnabled(false);
+                a81.setText("");
+                a82.setEnabled(false);
+                a82.setText("");
+                a83.setEnabled(false);
+                a83.setText("");
+                a84.setEnabled(false);
+                a84.setText("");
+                a85.setEnabled(false);
+                a85.setText("");
+                a86.setEnabled(false);
+                a86.setText("");
+                a87.setEnabled(false);
+                a87.setText("");
+                a88.setEnabled(false);
+                a88.setText("");
                 break;
             case 5:
-                matrix = new double[5][5];
-                matrix[0][0] = "".equals(a11.getText()) ? 0 : Double.parseDouble(a11.getText());
-                matrix[0][1] = "".equals(a12.getText()) ? 0 : Double.parseDouble(a12.getText());
-                matrix[0][2] = "".equals(a13.getText()) ? 0 : Double.parseDouble(a13.getText());
-                matrix[0][3] = "".equals(a14.getText()) ? 0 : Double.parseDouble(a14.getText());
-                matrix[0][4] = "".equals(a15.getText()) ? 0 : Double.parseDouble(a15.getText());
-                matrix[1][0] = "".equals(a21.getText()) ? 0 : Double.parseDouble(a21.getText());
-                matrix[1][1] = "".equals(a22.getText()) ? 0 : Double.parseDouble(a22.getText());
-                matrix[1][2] = "".equals(a23.getText()) ? 0 : Double.parseDouble(a23.getText());
-                matrix[1][3] = "".equals(a24.getText()) ? 0 : Double.parseDouble(a24.getText());
-                matrix[1][4] = "".equals(a25.getText()) ? 0 : Double.parseDouble(a25.getText());
-                matrix[2][0] = "".equals(a31.getText()) ? 0 : Double.parseDouble(a31.getText());
-                matrix[2][1] = "".equals(a32.getText()) ? 0 : Double.parseDouble(a32.getText());
-                matrix[2][2] = "".equals(a33.getText()) ? 0 : Double.parseDouble(a33.getText());
-                matrix[2][3] = "".equals(a34.getText()) ? 0 : Double.parseDouble(a34.getText());
-                matrix[2][4] = "".equals(a35.getText()) ? 0 : Double.parseDouble(a35.getText());
-                matrix[3][0] = "".equals(a41.getText()) ? 0 : Double.parseDouble(a41.getText());
-                matrix[3][1] = "".equals(a42.getText()) ? 0 : Double.parseDouble(a42.getText());
-                matrix[3][2] = "".equals(a43.getText()) ? 0 : Double.parseDouble(a43.getText());
-                matrix[3][3] = "".equals(a44.getText()) ? 0 : Double.parseDouble(a44.getText());
-                matrix[3][4] = "".equals(a45.getText()) ? 0 : Double.parseDouble(a45.getText());
-                matrix[4][0] = "".equals(a51.getText()) ? 0 : Double.parseDouble(a51.getText());
-                matrix[4][1] = "".equals(a52.getText()) ? 0 : Double.parseDouble(a52.getText());
-                matrix[4][2] = "".equals(a53.getText()) ? 0 : Double.parseDouble(a53.getText());
-                matrix[4][3] = "".equals(a54.getText()) ? 0 : Double.parseDouble(a54.getText());
-                matrix[4][4] = "".equals(a55.getText()) ? 0 : Double.parseDouble(a55.getText());
+                a11.setText("");
+                a12.setText("");
+                a21.setText("");
+                a22.setText("");
+                a13.setEnabled(true);
+                a13.setText("");
+                a14.setEnabled(true);
+                a14.setText("");
+                a15.setEnabled(true);
+                a15.setText("");
+                a16.setEnabled(false);
+                a16.setText("");
+                a17.setEnabled(false);
+                a17.setText("");
+                a18.setEnabled(false);
+                a18.setText("");
+                a23.setEnabled(true);
+                a23.setText("");
+                a24.setEnabled(true);
+                a24.setText("");
+                a25.setEnabled(true);
+                a25.setText("");
+                a26.setEnabled(false);
+                a26.setText("");
+                a27.setEnabled(false);
+                a27.setText("");
+                a28.setEnabled(false);
+                a28.setText("");
+                a31.setEnabled(true);
+                a31.setText("");
+                a32.setEnabled(true);
+                a32.setText("");
+                a33.setEnabled(true);
+                a33.setText("");
+                a34.setEnabled(true);
+                a34.setText("");
+                a35.setEnabled(true);
+                a35.setText("");
+                a36.setEnabled(false);
+                a36.setText("");
+                a37.setEnabled(false);
+                a37.setText("");
+                a38.setEnabled(false);
+                a38.setText("");
+                a41.setEnabled(true);
+                a41.setText("");
+                a42.setEnabled(true);
+                a42.setText("");
+                a43.setEnabled(true);
+                a43.setText("");
+                a44.setEnabled(true);
+                a44.setText("");
+                a45.setEnabled(true);
+                a45.setText("");
+                a46.setEnabled(false);
+                a46.setText("");
+                a47.setEnabled(false);
+                a47.setText("");
+                a48.setEnabled(false);
+                a48.setText("");
+                a51.setEnabled(true);
+                a51.setText("");
+                a52.setEnabled(true);
+                a52.setText("");
+                a53.setEnabled(true);
+                a53.setText("");
+                a54.setEnabled(true);
+                a54.setText("");
+                a55.setEnabled(true);
+                a55.setText("");
+                a56.setEnabled(false);
+                a56.setText("");
+                a57.setEnabled(false);
+                a57.setText("");
+                a58.setEnabled(false);
+                a58.setText("");
+                a61.setEnabled(false);
+                a61.setText("");
+                a62.setEnabled(false);
+                a62.setText("");
+                a63.setEnabled(false);
+                a63.setText("");
+                a64.setEnabled(false);
+                a64.setText("");
+                a65.setEnabled(false);
+                a65.setText("");
+                a66.setEnabled(false);
+                a66.setText("");
+                a67.setEnabled(false);
+                a67.setText("");
+                a68.setEnabled(false);
+                a68.setText("");
+                a71.setEnabled(false);
+                a71.setText("");
+                a72.setEnabled(false);
+                a72.setText("");
+                a73.setEnabled(false);
+                a73.setText("");
+                a74.setEnabled(false);
+                a74.setText("");
+                a75.setEnabled(false);
+                a75.setText("");
+                a76.setEnabled(false);
+                a76.setText("");
+                a77.setEnabled(false);
+                a77.setText("");
+                a78.setEnabled(false);
+                a78.setText("");
+                a81.setEnabled(false);
+                a81.setText("");
+                a82.setEnabled(false);
+                a82.setText("");
+                a83.setEnabled(false);
+                a83.setText("");
+                a84.setEnabled(false);
+                a84.setText("");
+                a85.setEnabled(false);
+                a85.setText("");
+                a86.setEnabled(false);
+                a86.setText("");
+                a87.setEnabled(false);
+                a87.setText("");
+                a88.setEnabled(false);
+                a88.setText("");
                 break;
             case 6:
-                matrix = new double[6][6];
-                matrix[0][0] = "".equals(a11.getText()) ? 0 : Double.parseDouble(a11.getText());
-                matrix[0][1] = "".equals(a12.getText()) ? 0 : Double.parseDouble(a12.getText());
-                matrix[0][2] = "".equals(a13.getText()) ? 0 : Double.parseDouble(a13.getText());
-                matrix[0][3] = "".equals(a14.getText()) ? 0 : Double.parseDouble(a14.getText());
-                matrix[0][4] = "".equals(a15.getText()) ? 0 : Double.parseDouble(a15.getText());
-                matrix[0][5] = "".equals(a16.getText()) ? 0 : Double.parseDouble(a16.getText());
-                matrix[1][0] = "".equals(a21.getText()) ? 0 : Double.parseDouble(a21.getText());
-                matrix[1][1] = "".equals(a22.getText()) ? 0 : Double.parseDouble(a22.getText());
-                matrix[1][2] = "".equals(a23.getText()) ? 0 : Double.parseDouble(a23.getText());
-                matrix[1][3] = "".equals(a24.getText()) ? 0 : Double.parseDouble(a24.getText());
-                matrix[1][4] = "".equals(a25.getText()) ? 0 : Double.parseDouble(a25.getText());
-                matrix[1][5] = "".equals(a26.getText()) ? 0 : Double.parseDouble(a26.getText());
-                matrix[2][0] = "".equals(a31.getText()) ? 0 : Double.parseDouble(a31.getText());
-                matrix[2][1] = "".equals(a32.getText()) ? 0 : Double.parseDouble(a32.getText());
-                matrix[2][2] = "".equals(a33.getText()) ? 0 : Double.parseDouble(a33.getText());
-                matrix[2][3] = "".equals(a34.getText()) ? 0 : Double.parseDouble(a34.getText());
-                matrix[2][4] = "".equals(a35.getText()) ? 0 : Double.parseDouble(a35.getText());
-                matrix[2][5] = "".equals(a36.getText()) ? 0 : Double.parseDouble(a36.getText());
-                matrix[3][0] = "".equals(a41.getText()) ? 0 : Double.parseDouble(a41.getText());
-                matrix[3][1] = "".equals(a42.getText()) ? 0 : Double.parseDouble(a42.getText());
-                matrix[3][2] = "".equals(a43.getText()) ? 0 : Double.parseDouble(a43.getText());
-                matrix[3][3] = "".equals(a44.getText()) ? 0 : Double.parseDouble(a44.getText());
-                matrix[3][4] = "".equals(a45.getText()) ? 0 : Double.parseDouble(a45.getText());
-                matrix[3][5] = "".equals(a46.getText()) ? 0 : Double.parseDouble(a46.getText());
-                matrix[4][0] = "".equals(a51.getText()) ? 0 : Double.parseDouble(a51.getText());
-                matrix[4][1] = "".equals(a52.getText()) ? 0 : Double.parseDouble(a52.getText());
-                matrix[4][2] = "".equals(a53.getText()) ? 0 : Double.parseDouble(a53.getText());
-                matrix[4][3] = "".equals(a54.getText()) ? 0 : Double.parseDouble(a54.getText());
-                matrix[4][4] = "".equals(a55.getText()) ? 0 : Double.parseDouble(a55.getText());
-                matrix[4][5] = "".equals(a56.getText()) ? 0 : Double.parseDouble(a56.getText());
-                matrix[5][0] = "".equals(a61.getText()) ? 0 : Double.parseDouble(a61.getText());
-                matrix[5][1] = "".equals(a62.getText()) ? 0 : Double.parseDouble(a62.getText());
-                matrix[5][2] = "".equals(a63.getText()) ? 0 : Double.parseDouble(a64.getText());
-                matrix[5][3] = "".equals(a64.getText()) ? 0 : Double.parseDouble(a64.getText());
-                matrix[5][4] = "".equals(a65.getText()) ? 0 : Double.parseDouble(a65.getText());
-                matrix[5][5] = "".equals(a66.getText()) ? 0 : Double.parseDouble(a66.getText());
+                a11.setText("");
+                a12.setText("");
+                a21.setText("");
+                a22.setText("");
+                a13.setEnabled(true);
+                a13.setText("");
+                a14.setEnabled(true);
+                a14.setText("");
+                a15.setEnabled(true);
+                a15.setText("");
+                a16.setEnabled(true);
+                a16.setText("");
+                a17.setEnabled(false);
+                a17.setText("");
+                a18.setEnabled(false);
+                a18.setText("");
+                a23.setEnabled(true);
+                a23.setText("");
+                a24.setEnabled(true);
+                a24.setText("");
+                a25.setEnabled(true);
+                a25.setText("");
+                a26.setEnabled(true);
+                a26.setText("");
+                a27.setEnabled(false);
+                a27.setText("");
+                a28.setEnabled(false);
+                a28.setText("");
+                a31.setEnabled(true);
+                a31.setText("");
+                a32.setEnabled(true);
+                a32.setText("");
+                a33.setEnabled(true);
+                a33.setText("");
+                a34.setEnabled(true);
+                a34.setText("");
+                a35.setEnabled(true);
+                a35.setText("");
+                a36.setEnabled(true);
+                a36.setText("");
+                a37.setEnabled(false);
+                a37.setText("");
+                a38.setEnabled(false);
+                a38.setText("");
+                a41.setEnabled(true);
+                a41.setText("");
+                a42.setEnabled(true);
+                a42.setText("");
+                a43.setEnabled(true);
+                a43.setText("");
+                a44.setEnabled(true);
+                a44.setText("");
+                a45.setEnabled(true);
+                a45.setText("");
+                a46.setEnabled(true);
+                a46.setText("");
+                a47.setEnabled(false);
+                a47.setText("");
+                a48.setEnabled(false);
+                a48.setText("");
+                a51.setEnabled(true);
+                a51.setText("");
+                a52.setEnabled(true);
+                a52.setText("");
+                a53.setEnabled(true);
+                a53.setText("");
+                a54.setEnabled(true);
+                a54.setText("");
+                a55.setEnabled(true);
+                a55.setText("");
+                a56.setEnabled(true);
+                a56.setText("");
+                a57.setEnabled(false);
+                a57.setText("");
+                a58.setEnabled(false);
+                a58.setText("");
+                a61.setEnabled(true);
+                a61.setText("");
+                a62.setEnabled(true);
+                a62.setText("");
+                a63.setEnabled(true);
+                a63.setText("");
+                a64.setEnabled(true);
+                a64.setText("");
+                a65.setEnabled(true);
+                a65.setText("");
+                a66.setEnabled(true);
+                a66.setText("");
+                a67.setEnabled(false);
+                a67.setText("");
+                a68.setEnabled(false);
+                a68.setText("");
+                a71.setEnabled(false);
+                a71.setText("");
+                a72.setEnabled(false);
+                a72.setText("");
+                a73.setEnabled(false);
+                a73.setText("");
+                a74.setEnabled(false);
+                a74.setText("");
+                a75.setEnabled(false);
+                a75.setText("");
+                a76.setEnabled(false);
+                a76.setText("");
+                a77.setEnabled(false);
+                a77.setText("");
+                a78.setEnabled(false);
+                a78.setText("");
+                a81.setEnabled(false);
+                a81.setText("");
+                a82.setEnabled(false);
+                a82.setText("");
+                a83.setEnabled(false);
+                a83.setText("");
+                a84.setEnabled(false);
+                a84.setText("");
+                a85.setEnabled(false);
+                a85.setText("");
+                a86.setEnabled(false);
+                a86.setText("");
+                a87.setEnabled(false);
+                a87.setText("");
+                a88.setEnabled(false);
+                a88.setText("");
                 break;
             case 7:
-                matrix = new double[7][7];
-                matrix[0][0] = "".equals(a11.getText()) ? 0 : Double.parseDouble(a11.getText());
-                matrix[0][1] = "".equals(a12.getText()) ? 0 : Double.parseDouble(a12.getText());
-                matrix[0][2] = "".equals(a13.getText()) ? 0 : Double.parseDouble(a13.getText());
-                matrix[0][3] = "".equals(a14.getText()) ? 0 : Double.parseDouble(a14.getText());
-                matrix[0][4] = "".equals(a15.getText()) ? 0 : Double.parseDouble(a15.getText());
-                matrix[0][5] = "".equals(a16.getText()) ? 0 : Double.parseDouble(a16.getText());
-                matrix[0][6] = "".equals(a17.getText()) ? 0 : Double.parseDouble(a17.getText());
-                matrix[1][0] = "".equals(a21.getText()) ? 0 : Double.parseDouble(a21.getText());
-                matrix[1][1] = "".equals(a22.getText()) ? 0 : Double.parseDouble(a22.getText());
-                matrix[1][2] = "".equals(a23.getText()) ? 0 : Double.parseDouble(a23.getText());
-                matrix[1][3] = "".equals(a24.getText()) ? 0 : Double.parseDouble(a24.getText());
-                matrix[1][4] = "".equals(a25.getText()) ? 0 : Double.parseDouble(a25.getText());
-                matrix[1][5] = "".equals(a26.getText()) ? 0 : Double.parseDouble(a26.getText());
-                matrix[1][6] = "".equals(a27.getText()) ? 0 : Double.parseDouble(a27.getText());
-                matrix[2][0] = "".equals(a31.getText()) ? 0 : Double.parseDouble(a31.getText());
-                matrix[2][1] = "".equals(a32.getText()) ? 0 : Double.parseDouble(a32.getText());
-                matrix[2][2] = "".equals(a33.getText()) ? 0 : Double.parseDouble(a33.getText());
-                matrix[2][3] = "".equals(a34.getText()) ? 0 : Double.parseDouble(a34.getText());
-                matrix[2][4] = "".equals(a35.getText()) ? 0 : Double.parseDouble(a35.getText());
-                matrix[2][5] = "".equals(a36.getText()) ? 0 : Double.parseDouble(a36.getText());
-                matrix[2][6] = "".equals(a37.getText()) ? 0 : Double.parseDouble(a37.getText());
-                matrix[3][0] = "".equals(a41.getText()) ? 0 : Double.parseDouble(a41.getText());
-                matrix[3][1] = "".equals(a42.getText()) ? 0 : Double.parseDouble(a42.getText());
-                matrix[3][2] = "".equals(a43.getText()) ? 0 : Double.parseDouble(a43.getText());
-                matrix[3][3] = "".equals(a44.getText()) ? 0 : Double.parseDouble(a44.getText());
-                matrix[3][4] = "".equals(a45.getText()) ? 0 : Double.parseDouble(a45.getText());
-                matrix[3][5] = "".equals(a46.getText()) ? 0 : Double.parseDouble(a46.getText());
-                matrix[3][6] = "".equals(a47.getText()) ? 0 : Double.parseDouble(a47.getText());
-                matrix[4][0] = "".equals(a51.getText()) ? 0 : Double.parseDouble(a51.getText());
-                matrix[4][1] = "".equals(a52.getText()) ? 0 : Double.parseDouble(a52.getText());
-                matrix[4][2] = "".equals(a53.getText()) ? 0 : Double.parseDouble(a53.getText());
-                matrix[4][3] = "".equals(a54.getText()) ? 0 : Double.parseDouble(a54.getText());
-                matrix[4][4] = "".equals(a55.getText()) ? 0 : Double.parseDouble(a55.getText());
-                matrix[4][5] = "".equals(a56.getText()) ? 0 : Double.parseDouble(a56.getText());
-                matrix[4][6] = "".equals(a57.getText()) ? 0 : Double.parseDouble(a57.getText());
-                matrix[5][0] = "".equals(a61.getText()) ? 0 : Double.parseDouble(a61.getText());
-                matrix[5][1] = "".equals(a62.getText()) ? 0 : Double.parseDouble(a62.getText());
-                matrix[5][2] = "".equals(a63.getText()) ? 0 : Double.parseDouble(a63.getText());
-                matrix[5][3] = "".equals(a64.getText()) ? 0 : Double.parseDouble(a64.getText());
-                matrix[5][4] = "".equals(a65.getText()) ? 0 : Double.parseDouble(a65.getText());
-                matrix[5][5] = "".equals(a66.getText()) ? 0 : Double.parseDouble(a66.getText());
-                matrix[5][6] = "".equals(a67.getText()) ? 0 : Double.parseDouble(a67.getText());
-                matrix[6][0] = "".equals(a71.getText()) ? 0 : Double.parseDouble(a71.getText());
-                matrix[6][1] = "".equals(a72.getText()) ? 0 : Double.parseDouble(a72.getText());
-                matrix[6][2] = "".equals(a73.getText()) ? 0 : Double.parseDouble(a73.getText());
-                matrix[6][3] = "".equals(a74.getText()) ? 0 : Double.parseDouble(a74.getText());
-                matrix[6][4] = "".equals(a75.getText()) ? 0 : Double.parseDouble(a75.getText());
-                matrix[6][5] = "".equals(a76.getText()) ? 0 : Double.parseDouble(a76.getText());
-                matrix[6][6] = "".equals(a77.getText()) ? 0 : Double.parseDouble(a77.getText());
+                a11.setText("");
+                a12.setText("");
+                a21.setText("");
+                a22.setText("");
+                a13.setEnabled(true);
+                a13.setText("");
+                a14.setEnabled(true);
+                a14.setText("");
+                a15.setEnabled(true);
+                a15.setText("");
+                a16.setEnabled(true);
+                a16.setText("");
+                a17.setEnabled(true);
+                a17.setText("");
+                a18.setEnabled(false);
+                a18.setText("");
+                a23.setEnabled(true);
+                a23.setText("");
+                a24.setEnabled(true);
+                a24.setText("");
+                a25.setEnabled(true);
+                a25.setText("");
+                a26.setEnabled(true);
+                a26.setText("");
+                a27.setEnabled(true);
+                a27.setText("");
+                a28.setEnabled(false);
+                a28.setText("");
+                a31.setEnabled(true);
+                a31.setText("");
+                a32.setEnabled(true);
+                a32.setText("");
+                a33.setEnabled(true);
+                a33.setText("");
+                a34.setEnabled(true);
+                a34.setText("");
+                a35.setEnabled(true);
+                a35.setText("");
+                a36.setEnabled(true);
+                a36.setText("");
+                a37.setEnabled(true);
+                a37.setText("");
+                a38.setEnabled(false);
+                a38.setText("");
+                a41.setEnabled(true);
+                a41.setText("");
+                a42.setEnabled(true);
+                a42.setText("");
+                a43.setEnabled(true);
+                a43.setText("");
+                a44.setEnabled(true);
+                a44.setText("");
+                a45.setEnabled(true);
+                a45.setText("");
+                a46.setEnabled(true);
+                a46.setText("");
+                a47.setEnabled(true);
+                a47.setText("");
+                a48.setEnabled(false);
+                a48.setText("");
+                a51.setEnabled(true);
+                a51.setText("");
+                a52.setEnabled(true);
+                a52.setText("");
+                a53.setEnabled(true);
+                a53.setText("");
+                a54.setEnabled(true);
+                a54.setText("");
+                a55.setEnabled(true);
+                a55.setText("");
+                a56.setEnabled(true);
+                a56.setText("");
+                a57.setEnabled(true);
+                a57.setText("");
+                a58.setEnabled(false);
+                a58.setText("");
+                a61.setEnabled(true);
+                a61.setText("");
+                a62.setEnabled(true);
+                a62.setText("");
+                a63.setEnabled(true);
+                a63.setText("");
+                a64.setEnabled(true);
+                a64.setText("");
+                a65.setEnabled(true);
+                a65.setText("");
+                a66.setEnabled(true);
+                a66.setText("");
+                a67.setEnabled(true);
+                a67.setText("");
+                a68.setEnabled(false);
+                a68.setText("");
+                a71.setEnabled(true);
+                a71.setText("");
+                a72.setEnabled(true);
+                a72.setText("");
+                a73.setEnabled(true);
+                a73.setText("");
+                a74.setEnabled(true);
+                a74.setText("");
+                a75.setEnabled(true);
+                a75.setText("");
+                a76.setEnabled(true);
+                a76.setText("");
+                a77.setEnabled(true);
+                a77.setText("");
+                a78.setEnabled(false);
+                a78.setText("");
+                a81.setEnabled(false);
+                a81.setText("");
+                a82.setEnabled(false);
+                a82.setText("");
+                a83.setEnabled(false);
+                a83.setText("");
+                a84.setEnabled(false);
+                a84.setText("");
+                a85.setEnabled(false);
+                a85.setText("");
+                a86.setEnabled(false);
+                a86.setText("");
+                a87.setEnabled(false);
+                a87.setText("");
+                a88.setEnabled(false);
+                a88.setText("");
                 break;
             case 8:
-                matrix = new double[8][8];
-                matrix[0][0] = "".equals(a11.getText()) ? 0 : Double.parseDouble(a11.getText());
-                matrix[0][1] = "".equals(a12.getText()) ? 0 : Double.parseDouble(a12.getText());
-                matrix[0][2] = "".equals(a13.getText()) ? 0 : Double.parseDouble(a13.getText());
-                matrix[0][3] = "".equals(a14.getText()) ? 0 : Double.parseDouble(a14.getText());
-                matrix[0][4] = "".equals(a15.getText()) ? 0 : Double.parseDouble(a15.getText());
-                matrix[0][5] = "".equals(a16.getText()) ? 0 : Double.parseDouble(a16.getText());
-                matrix[0][6] = "".equals(a17.getText()) ? 0 : Double.parseDouble(a17.getText());
-                matrix[0][7] = "".equals(a18.getText()) ? 0 : Double.parseDouble(a18.getText());
-                matrix[1][0] = "".equals(a21.getText()) ? 0 : Double.parseDouble(a21.getText());
-                matrix[1][1] = "".equals(a22.getText()) ? 0 : Double.parseDouble(a22.getText());
-                matrix[1][2] = "".equals(a23.getText()) ? 0 : Double.parseDouble(a23.getText());
-                matrix[1][3] = "".equals(a24.getText()) ? 0 : Double.parseDouble(a24.getText());
-                matrix[1][4] = "".equals(a25.getText()) ? 0 : Double.parseDouble(a25.getText());
-                matrix[1][5] = "".equals(a26.getText()) ? 0 : Double.parseDouble(a26.getText());
-                matrix[1][6] = "".equals(a27.getText()) ? 0 : Double.parseDouble(a27.getText());
-                matrix[1][7] = "".equals(a28.getText()) ? 0 : Double.parseDouble(a28.getText());
-                matrix[2][0] = "".equals(a31.getText()) ? 0 : Double.parseDouble(a31.getText());
-                matrix[2][1] = "".equals(a32.getText()) ? 0 : Double.parseDouble(a32.getText());
-                matrix[2][2] = "".equals(a33.getText()) ? 0 : Double.parseDouble(a33.getText());
-                matrix[2][3] = "".equals(a34.getText()) ? 0 : Double.parseDouble(a34.getText());
-                matrix[2][4] = "".equals(a35.getText()) ? 0 : Double.parseDouble(a35.getText());
-                matrix[2][5] = "".equals(a36.getText()) ? 0 : Double.parseDouble(a36.getText());
-                matrix[2][6] = "".equals(a37.getText()) ? 0 : Double.parseDouble(a37.getText());
-                matrix[2][7] = "".equals(a38.getText()) ? 0 : Double.parseDouble(a38.getText());
-                matrix[3][0] = "".equals(a41.getText()) ? 0 : Double.parseDouble(a41.getText());
-                matrix[3][1] = "".equals(a42.getText()) ? 0 : Double.parseDouble(a42.getText());
-                matrix[3][2] = "".equals(a43.getText()) ? 0 : Double.parseDouble(a43.getText());
-                matrix[3][3] = "".equals(a44.getText()) ? 0 : Double.parseDouble(a44.getText());
-                matrix[3][4] = "".equals(a45.getText()) ? 0 : Double.parseDouble(a45.getText());
-                matrix[3][5] = "".equals(a46.getText()) ? 0 : Double.parseDouble(a46.getText());
-                matrix[3][6] = "".equals(a47.getText()) ? 0 : Double.parseDouble(a47.getText());
-                matrix[3][7] = "".equals(a48.getText()) ? 0 : Double.parseDouble(a48.getText());
-                matrix[4][0] = "".equals(a51.getText()) ? 0 : Double.parseDouble(a51.getText());
-                matrix[4][1] = "".equals(a52.getText()) ? 0 : Double.parseDouble(a52.getText());
-                matrix[4][2] = "".equals(a53.getText()) ? 0 : Double.parseDouble(a53.getText());
-                matrix[4][3] = "".equals(a54.getText()) ? 0 : Double.parseDouble(a54.getText());
-                matrix[4][4] = "".equals(a55.getText()) ? 0 : Double.parseDouble(a55.getText());
-                matrix[4][5] = "".equals(a56.getText()) ? 0 : Double.parseDouble(a56.getText());
-                matrix[4][6] = "".equals(a57.getText()) ? 0 : Double.parseDouble(a57.getText());
-                matrix[4][7] = "".equals(a58.getText()) ? 0 : Double.parseDouble(a58.getText());
-                matrix[5][0] = "".equals(a61.getText()) ? 0 : Double.parseDouble(a61.getText());
-                matrix[5][1] = "".equals(a62.getText()) ? 0 : Double.parseDouble(a62.getText());
-                matrix[5][2] = "".equals(a63.getText()) ? 0 : Double.parseDouble(a63.getText());
-                matrix[5][3] = "".equals(a64.getText()) ? 0 : Double.parseDouble(a64.getText());
-                matrix[5][4] = "".equals(a65.getText()) ? 0 : Double.parseDouble(a65.getText());
-                matrix[5][5] = "".equals(a66.getText()) ? 0 : Double.parseDouble(a66.getText());
-                matrix[5][6] = "".equals(a67.getText()) ? 0 : Double.parseDouble(a67.getText());
-                matrix[5][7] = "".equals(a68.getText()) ? 0 : Double.parseDouble(a68.getText());
-                matrix[6][0] = "".equals(a71.getText()) ? 0 : Double.parseDouble(a71.getText());
-                matrix[6][1] = "".equals(a72.getText()) ? 0 : Double.parseDouble(a72.getText());
-                matrix[6][2] = "".equals(a73.getText()) ? 0 : Double.parseDouble(a73.getText());
-                matrix[6][3] = "".equals(a74.getText()) ? 0 : Double.parseDouble(a74.getText());
-                matrix[6][4] = "".equals(a75.getText()) ? 0 : Double.parseDouble(a75.getText());
-                matrix[6][5] = "".equals(a76.getText()) ? 0 : Double.parseDouble(a76.getText());
-                matrix[6][6] = "".equals(a77.getText()) ? 0 : Double.parseDouble(a77.getText());
-                matrix[6][7] = "".equals(a78.getText()) ? 0 : Double.parseDouble(a78.getText());
-                matrix[7][0] = "".equals(a81.getText()) ? 0 : Double.parseDouble(a81.getText());
-                matrix[7][1] = "".equals(a82.getText()) ? 0 : Double.parseDouble(a82.getText());
-                matrix[7][2] = "".equals(a83.getText()) ? 0 : Double.parseDouble(a83.getText());
-                matrix[7][3] = "".equals(a84.getText()) ? 0 : Double.parseDouble(a84.getText());
-                matrix[7][4] = "".equals(a85.getText()) ? 0 : Double.parseDouble(a85.getText());
-                matrix[7][5] = "".equals(a86.getText()) ? 0 : Double.parseDouble(a86.getText());
-                matrix[7][6] = "".equals(a87.getText()) ? 0 : Double.parseDouble(a87.getText());
-                matrix[7][7] = "".equals(a88.getText()) ? 0 : Double.parseDouble(a88.getText());
+                a11.setText("");
+                a12.setText("");
+                a21.setText("");
+                a22.setText("");
+                a13.setEnabled(true);
+                a13.setText("");
+                a14.setEnabled(true);
+                a14.setText("");
+                a15.setEnabled(true);
+                a15.setText("");
+                a16.setEnabled(true);
+                a16.setText("");
+                a17.setEnabled(true);
+                a27.setText("");
+                a18.setEnabled(true);
+                a28.setText("");
+                a23.setEnabled(true);
+                a23.setText("");
+                a24.setEnabled(true);
+                a24.setText("");
+                a25.setEnabled(true);
+                a25.setText("");
+                a26.setEnabled(true);
+                a26.setText("");
+                a27.setEnabled(true);
+                a27.setText("");
+                a28.setEnabled(true);
+                a28.setText("");
+                a31.setEnabled(true);
+                a31.setText("");
+                a32.setEnabled(true);
+                a32.setText("");
+                a33.setEnabled(true);
+                a33.setText("");
+                a34.setEnabled(true);
+                a34.setText("");
+                a35.setEnabled(true);
+                a35.setText("");
+                a36.setEnabled(true);
+                a36.setText("");
+                a37.setEnabled(true);
+                a37.setText("");
+                a38.setEnabled(true);
+                a38.setText("");
+                a41.setEnabled(true);
+                a41.setText("");
+                a42.setEnabled(true);
+                a42.setText("");
+                a43.setEnabled(true);
+                a43.setText("");
+                a44.setEnabled(true);
+                a44.setText("");
+                a45.setEnabled(true);
+                a45.setText("");
+                a46.setEnabled(true);
+                a46.setText("");
+                a47.setEnabled(true);
+                a47.setText("");
+                a48.setEnabled(true);
+                a48.setText("");
+                a51.setEnabled(true);
+                a51.setText("");
+                a52.setEnabled(true);
+                a52.setText("");
+                a53.setEnabled(true);
+                a53.setText("");
+                a54.setEnabled(true);
+                a54.setText("");
+                a55.setEnabled(true);
+                a55.setText("");
+                a56.setEnabled(true);
+                a56.setText("");
+                a57.setEnabled(true);
+                a57.setText("");
+                a58.setEnabled(true);
+                a58.setText("");
+                a61.setEnabled(true);
+                a61.setText("");
+                a62.setEnabled(true);
+                a62.setText("");
+                a63.setEnabled(true);
+                a63.setText("");
+                a64.setEnabled(true);
+                a64.setText("");
+                a65.setEnabled(true);
+                a65.setText("");
+                a66.setEnabled(true);
+                a66.setText("");
+                a67.setEnabled(true);
+                a67.setText("");
+                a68.setEnabled(true);
+                a68.setText("");
+                a71.setEnabled(true);
+                a71.setText("");
+                a72.setEnabled(true);
+                a72.setText("");
+                a73.setEnabled(true);
+                a73.setText("");
+                a74.setEnabled(true);
+                a74.setText("");
+                a75.setEnabled(true);
+                a75.setText("");
+                a76.setEnabled(true);
+                a76.setText("");
+                a77.setEnabled(true);
+                a77.setText("");
+                a78.setEnabled(true);
+                a78.setText("");
+                a81.setEnabled(true);
+                a81.setText("");
+                a82.setEnabled(true);
+                a82.setText("");
+                a83.setEnabled(true);
+                a83.setText("");
+                a84.setEnabled(true);
+                a84.setText("");
+                a85.setEnabled(true);
+                a85.setText("");
+                a86.setEnabled(true);
+                a86.setText("");
+                a87.setEnabled(true);
+                a87.setText("");
+                a88.setEnabled(true);
+                a88.setText("");
                 break;
             default:
                 break;
-        }
-        return SquareMatrixOperations.find_determinant(matrix);
-    }
-    private void matrixSizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matrixSizeActionPerformed
-        if (matrixSize.getSelectedItem() == "2x2") {
-            a11.setText("");
-            a12.setText("");
-            a21.setText("");
-            a22.setText("");
-            a13.setEnabled(false); a13.setText("");
-            a14.setEnabled(false); a14.setText("");
-            a15.setEnabled(false); a15.setText("");
-            a16.setEnabled(false); a16.setText("");
-            a17.setEnabled(false); a17.setText("");
-            a18.setEnabled(false); a18.setText("");
-            a23.setEnabled(false); a23.setText(""); 
-            a24.setEnabled(false); a24.setText(""); 
-            a25.setEnabled(false); a25.setText(""); 
-            a26.setEnabled(false); a26.setText(""); 
-            a27.setEnabled(false); a27.setText(""); 
-            a28.setEnabled(false); a28.setText(""); 
-            a31.setEnabled(false); a31.setText(""); 
-            a32.setEnabled(false); a32.setText("");
-            a33.setEnabled(false); a33.setText("");
-            a34.setEnabled(false); a34.setText("");
-            a35.setEnabled(false); a35.setText("");
-            a36.setEnabled(false); a36.setText("");
-            a37.setEnabled(false); a37.setText("");
-            a38.setEnabled(false); a38.setText("");
-            a41.setEnabled(false); a41.setText("");
-            a42.setEnabled(false); a42.setText("");
-            a43.setEnabled(false); a43.setText("");
-            a44.setEnabled(false); a44.setText("");
-            a45.setEnabled(false); a45.setText("");
-            a46.setEnabled(false); a46.setText("");
-            a47.setEnabled(false); a47.setText("");
-            a48.setEnabled(false); a48.setText("");
-            a51.setEnabled(false); a51.setText("");
-            a52.setEnabled(false); a52.setText("");
-            a53.setEnabled(false); a53.setText("");
-            a54.setEnabled(false); a54.setText("");
-            a55.setEnabled(false); a55.setText("");
-            a56.setEnabled(false); a56.setText("");
-            a57.setEnabled(false); a57.setText("");
-            a58.setEnabled(false); a58.setText("");
-            a61.setEnabled(false); a61.setText("");
-            a62.setEnabled(false); a62.setText("");
-            a63.setEnabled(false); a63.setText("");
-            a64.setEnabled(false); a64.setText("");
-            a65.setEnabled(false); a65.setText("");
-            a66.setEnabled(false); a66.setText(""); 
-            a67.setEnabled(false); a67.setText("");
-            a68.setEnabled(false); a68.setText("");
-            a71.setEnabled(false); a71.setText("");
-            a72.setEnabled(false); a72.setText("");
-            a73.setEnabled(false); a73.setText("");
-            a74.setEnabled(false); a74.setText("");
-            a75.setEnabled(false); a75.setText("");
-            a76.setEnabled(false); a76.setText("");
-            a77.setEnabled(false); a77.setText("");
-            a78.setEnabled(false); a78.setText("");
-            a81.setEnabled(false); a81.setText("");
-            a82.setEnabled(false); a82.setText("");
-            a83.setEnabled(false); a83.setText("");
-            a84.setEnabled(false); a84.setText("");
-            a85.setEnabled(false); a85.setText("");
-            a86.setEnabled(false); a86.setText("");
-            a87.setEnabled(false); a87.setText("");
-            a88.setEnabled(false); a88.setText("");
-        }
-        else if (matrixSize.getSelectedItem() == "3x3") {
-            a11.setText(""); 
-            a12.setText("");
-            a21.setText("");
-            a22.setText("");
-            a13.setEnabled(true); a13.setText(""); 
-            a14.setEnabled(false); a14.setText(""); 
-            a15.setEnabled(false); a15.setText(""); 
-            a16.setEnabled(false); a16.setText(""); 
-            a17.setEnabled(false); a17.setText(""); 
-            a18.setEnabled(false); a18.setText(""); 
-            a23.setEnabled(true); a23.setText(""); 
-            a24.setEnabled(false); a24.setText("");
-            a25.setEnabled(false); a25.setText("");
-            a26.setEnabled(false); a26.setText("");
-            a27.setEnabled(false); a27.setText("");
-            a28.setEnabled(false); a28.setText("");
-            a31.setEnabled(true); a31.setText("");
-            a32.setEnabled(true); a32.setText("");
-            a33.setEnabled(true); a33.setText("");
-            a34.setEnabled(false); a34.setText("");
-            a35.setEnabled(false); a35.setText("");
-            a36.setEnabled(false); a36.setText("");
-            a37.setEnabled(false); a37.setText("");
-            a38.setEnabled(false); a38.setText("");
-            a41.setEnabled(false); a41.setText("");
-            a42.setEnabled(false); a42.setText("");
-            a43.setEnabled(false); a43.setText("");
-            a44.setEnabled(false); a44.setText("");
-            a45.setEnabled(false); a45.setText("");
-            a46.setEnabled(false); a46.setText("");
-            a47.setEnabled(false); a47.setText(""); 
-            a48.setEnabled(false); a48.setText("");
-            a51.setEnabled(false); a51.setText("");
-            a52.setEnabled(false); a52.setText("");
-            a53.setEnabled(false); a53.setText("");
-            a54.setEnabled(false); a54.setText("");
-            a55.setEnabled(false); a55.setText("");
-            a56.setEnabled(false); a56.setText("");
-            a57.setEnabled(false); a57.setText("");
-            a58.setEnabled(false); a58.setText("");
-            a61.setEnabled(false); a61.setText("");
-            a62.setEnabled(false); a62.setText("");
-            a63.setEnabled(false); a63.setText(""); 
-            a64.setEnabled(false); a64.setText("");
-            a65.setEnabled(false); a65.setText("");
-            a66.setEnabled(false); a66.setText("");
-            a67.setEnabled(false); a67.setText("");
-            a68.setEnabled(false); a68.setText("");
-            a71.setEnabled(false); a71.setText("");
-            a72.setEnabled(false); a72.setText("");
-            a73.setEnabled(false); a73.setText("");
-            a74.setEnabled(false); a74.setText("");
-            a75.setEnabled(false); a75.setText("");
-            a76.setEnabled(false); a76.setText("");
-            a77.setEnabled(false); a77.setText("");
-            a78.setEnabled(false); a78.setText("");
-            a81.setEnabled(false); a81.setText("");
-            a82.setEnabled(false); a82.setText("");
-            a83.setEnabled(false); a83.setText("");
-            a84.setEnabled(false); a84.setText("");
-            a85.setEnabled(false); a85.setText("");
-            a86.setEnabled(false); a86.setText("");
-            a87.setEnabled(false); a87.setText("");
-            a88.setEnabled(false); a88.setText("");
-        }
-        else if (matrixSize.getSelectedItem() == "4x4") {
-            a11.setText("");
-            a12.setText("");
-            a21.setText("");
-            a22.setText("");
-            a13.setEnabled(true); a13.setText("");
-            a14.setEnabled(true); a14.setText("");
-            a15.setEnabled(false); a15.setText("");
-            a16.setEnabled(false); a16.setText("");
-            a17.setEnabled(false); a17.setText("");
-            a18.setEnabled(false); a18.setText("");
-            a23.setEnabled(true); a23.setText("");
-            a24.setEnabled(true); a24.setText("");
-            a25.setEnabled(false); a25.setText("");
-            a26.setEnabled(false); a26.setText("");
-            a27.setEnabled(false); a27.setText("");
-            a28.setEnabled(false); a28.setText("");
-            a31.setEnabled(true); a31.setText("");
-            a32.setEnabled(true); a32.setText("");
-            a33.setEnabled(true); a33.setText("");
-            a34.setEnabled(true); a34.setText("");
-            a35.setEnabled(false); a35.setText("");
-            a36.setEnabled(false); a36.setText("");
-            a37.setEnabled(false); a37.setText("");
-            a38.setEnabled(false); a38.setText("");
-            a41.setEnabled(true); a41.setText("");
-            a42.setEnabled(true); a42.setText("");
-            a43.setEnabled(true); a43.setText("");
-            a44.setEnabled(true); a44.setText("");
-            a45.setEnabled(false); a45.setText("");
-            a46.setEnabled(false); a46.setText("");
-            a47.setEnabled(false); a47.setText("");
-            a48.setEnabled(false); a48.setText("");
-            a51.setEnabled(false); a51.setText("");
-            a52.setEnabled(false); a52.setText("");
-            a53.setEnabled(false); a53.setText("");
-            a54.setEnabled(false); a54.setText("");
-            a55.setEnabled(false); a55.setText("");
-            a56.setEnabled(false); a56.setText("");
-            a57.setEnabled(false); a57.setText("");
-            a58.setEnabled(false); a58.setText("");
-            a61.setEnabled(false); a61.setText("");
-            a62.setEnabled(false); a62.setText("");
-            a63.setEnabled(false); a63.setText("");
-            a64.setEnabled(false); a64.setText("");
-            a65.setEnabled(false); a65.setText("");
-            a66.setEnabled(false); a66.setText("");
-            a67.setEnabled(false); a67.setText("");
-            a68.setEnabled(false); a68.setText("");
-            a71.setEnabled(false); a71.setText("");
-            a72.setEnabled(false); a72.setText("");
-            a73.setEnabled(false); a73.setText("");
-            a74.setEnabled(false); a74.setText("");
-            a75.setEnabled(false); a75.setText("");
-            a76.setEnabled(false); a76.setText("");
-            a77.setEnabled(false); a77.setText("");
-            a78.setEnabled(false); a78.setText("");
-            a81.setEnabled(false); a81.setText("");
-            a82.setEnabled(false); a82.setText("");
-            a83.setEnabled(false); a83.setText("");
-            a84.setEnabled(false); a84.setText("");
-            a85.setEnabled(false); a85.setText("");
-            a86.setEnabled(false); a86.setText("");
-            a87.setEnabled(false); a87.setText("");
-            a88.setEnabled(false); a88.setText("");
-        }
-        else if (matrixSize.getSelectedItem() == "5x5") {
-            a11.setText("");
-            a12.setText("");
-            a21.setText("");
-            a22.setText("");
-            a13.setEnabled(true); a13.setText("");
-            a14.setEnabled(true); a14.setText("");
-            a15.setEnabled(true); a15.setText("");
-            a16.setEnabled(false); a16.setText("");
-            a17.setEnabled(false); a17.setText("");
-            a18.setEnabled(false); a18.setText("");
-            a23.setEnabled(true); a23.setText("");
-            a24.setEnabled(true); a24.setText("");
-            a25.setEnabled(true); a25.setText("");
-            a26.setEnabled(false); a26.setText("");
-            a27.setEnabled(false); a27.setText("");
-            a28.setEnabled(false); a28.setText("");
-            a31.setEnabled(true); a31.setText("");
-            a32.setEnabled(true); a32.setText("");
-            a33.setEnabled(true); a33.setText("");
-            a34.setEnabled(true); a34.setText("");
-            a35.setEnabled(true); a35.setText("");
-            a36.setEnabled(false); a36.setText("");
-            a37.setEnabled(false); a37.setText("");
-            a38.setEnabled(false); a38.setText("");
-            a41.setEnabled(true); a41.setText("");
-            a42.setEnabled(true); a42.setText("");
-            a43.setEnabled(true); a43.setText("");
-            a44.setEnabled(true); a44.setText("");
-            a45.setEnabled(true); a45.setText(""); 
-            a46.setEnabled(false); a46.setText("");
-            a47.setEnabled(false); a47.setText("");
-            a48.setEnabled(false); a48.setText("");
-            a51.setEnabled(true); a51.setText("");
-            a52.setEnabled(true); a52.setText("");
-            a53.setEnabled(true); a53.setText("");
-            a54.setEnabled(true); a54.setText("");
-            a55.setEnabled(true); a55.setText("");
-            a56.setEnabled(false); a56.setText("");
-            a57.setEnabled(false); a57.setText("");
-            a58.setEnabled(false); a58.setText("");
-            a61.setEnabled(false); a61.setText("");
-            a62.setEnabled(false); a62.setText("");
-            a63.setEnabled(false); a63.setText("");
-            a64.setEnabled(false); a64.setText("");
-            a65.setEnabled(false); a65.setText("");
-            a66.setEnabled(false); a66.setText("");
-            a67.setEnabled(false); a67.setText("");
-            a68.setEnabled(false); a68.setText("");
-            a71.setEnabled(false); a71.setText("");
-            a72.setEnabled(false); a72.setText("");
-            a73.setEnabled(false); a73.setText("");
-            a74.setEnabled(false); a74.setText("");
-            a75.setEnabled(false); a75.setText("");
-            a76.setEnabled(false); a76.setText("");
-            a77.setEnabled(false); a77.setText("");
-            a78.setEnabled(false); a78.setText("");
-            a81.setEnabled(false); a81.setText("");
-            a82.setEnabled(false); a82.setText("");
-            a83.setEnabled(false); a83.setText("");
-            a84.setEnabled(false); a84.setText("");
-            a85.setEnabled(false); a85.setText("");
-            a86.setEnabled(false); a86.setText(""); 
-            a87.setEnabled(false); a87.setText("");
-            a88.setEnabled(false); a88.setText("");
-        }
-        else if (matrixSize.getSelectedItem() == "6x6") {
-            a11.setText("");
-            a12.setText("");
-            a21.setText("");
-            a22.setText("");
-            a13.setEnabled(true); a13.setText("");
-            a14.setEnabled(true); a14.setText("");
-            a15.setEnabled(true); a15.setText("");
-            a16.setEnabled(true); a16.setText(""); 
-            a17.setEnabled(false); a17.setText("");
-            a18.setEnabled(false); a18.setText("");
-            a23.setEnabled(true); a23.setText("");
-            a24.setEnabled(true); a24.setText("");
-            a25.setEnabled(true); a25.setText("");
-            a26.setEnabled(true); a26.setText("");
-            a27.setEnabled(false); a27.setText("");
-            a28.setEnabled(false); a28.setText("");
-            a31.setEnabled(true); a31.setText("");
-            a32.setEnabled(true); a32.setText("");
-            a33.setEnabled(true); a33.setText("");
-            a34.setEnabled(true); a34.setText("");
-            a35.setEnabled(true); a35.setText("");
-            a36.setEnabled(true); a36.setText("");
-            a37.setEnabled(false); a37.setText("");
-            a38.setEnabled(false); a38.setText("");
-            a41.setEnabled(true); a41.setText("");
-            a42.setEnabled(true); a42.setText("");
-            a43.setEnabled(true); a43.setText("");
-            a44.setEnabled(true); a44.setText("");
-            a45.setEnabled(true); a45.setText("");
-            a46.setEnabled(true); a46.setText("");
-            a47.setEnabled(false); a47.setText("");
-            a48.setEnabled(false); a48.setText("");
-            a51.setEnabled(true); a51.setText("");
-            a52.setEnabled(true); a52.setText("");
-            a53.setEnabled(true); a53.setText("");
-            a54.setEnabled(true); a54.setText("");
-            a55.setEnabled(true); a55.setText("");
-            a56.setEnabled(true); a56.setText("");
-            a57.setEnabled(false); a57.setText("");
-            a58.setEnabled(false); a58.setText("");
-            a61.setEnabled(true); a61.setText("");
-            a62.setEnabled(true); a62.setText("");
-            a63.setEnabled(true); a63.setText("");
-            a64.setEnabled(true); a64.setText("");
-            a65.setEnabled(true); a65.setText("");
-            a66.setEnabled(true); a66.setText("");
-            a67.setEnabled(false); a67.setText("");
-            a68.setEnabled(false); a68.setText("");
-            a71.setEnabled(false); a71.setText("");
-            a72.setEnabled(false); a72.setText("");
-            a73.setEnabled(false); a73.setText("");
-            a74.setEnabled(false); a74.setText("");
-            a75.setEnabled(false); a75.setText("");
-            a76.setEnabled(false); a76.setText("");
-            a77.setEnabled(false); a77.setText("");
-            a78.setEnabled(false); a78.setText("");
-            a81.setEnabled(false); a81.setText("");
-            a82.setEnabled(false); a82.setText("");
-            a83.setEnabled(false); a83.setText("");
-            a84.setEnabled(false); a84.setText("");
-            a85.setEnabled(false); a85.setText("");
-            a86.setEnabled(false); a86.setText("");
-            a87.setEnabled(false); a87.setText("");
-            a88.setEnabled(false); a88.setText("");
-        }
-        else if (matrixSize.getSelectedItem() == "7x7") {
-            a11.setText("");
-            a12.setText("");
-            a21.setText("");
-            a22.setText("");
-            a13.setEnabled(true); a13.setText("");
-            a14.setEnabled(true); a14.setText("");
-            a15.setEnabled(true); a15.setText("");
-            a16.setEnabled(true); a16.setText("");
-            a17.setEnabled(true); a17.setText("");
-            a18.setEnabled(false); a18.setText("");
-            a23.setEnabled(true); a23.setText("");
-            a24.setEnabled(true); a24.setText("");
-            a25.setEnabled(true); a25.setText("");
-            a26.setEnabled(true); a26.setText("");
-            a27.setEnabled(true); a27.setText("");
-            a28.setEnabled(false); a28.setText("");
-            a31.setEnabled(true); a31.setText("");
-            a32.setEnabled(true); a32.setText("");
-            a33.setEnabled(true); a33.setText("");
-            a34.setEnabled(true); a34.setText("");
-            a35.setEnabled(true); a35.setText("");
-            a36.setEnabled(true); a36.setText("");
-            a37.setEnabled(true); a37.setText("");
-            a38.setEnabled(false); a38.setText("");
-            a41.setEnabled(true); a41.setText("");
-            a42.setEnabled(true); a42.setText("");
-            a43.setEnabled(true); a43.setText("");
-            a44.setEnabled(true); a44.setText("");
-            a45.setEnabled(true); a45.setText("");
-            a46.setEnabled(true); a46.setText("");
-            a47.setEnabled(true); a47.setText("");
-            a48.setEnabled(false); a48.setText("");
-            a51.setEnabled(true); a51.setText("");
-            a52.setEnabled(true); a52.setText("");
-            a53.setEnabled(true); a53.setText("");
-            a54.setEnabled(true); a54.setText("");
-            a55.setEnabled(true); a55.setText("");
-            a56.setEnabled(true); a56.setText("");
-            a57.setEnabled(true); a57.setText("");
-            a58.setEnabled(false); a58.setText("");
-            a61.setEnabled(true); a61.setText("");
-            a62.setEnabled(true); a62.setText("");
-            a63.setEnabled(true); a63.setText("");
-            a64.setEnabled(true); a64.setText("");
-            a65.setEnabled(true); a65.setText("");
-            a66.setEnabled(true); a66.setText("");
-            a67.setEnabled(true); a67.setText("");
-            a68.setEnabled(false); a68.setText("");
-            a71.setEnabled(true); a71.setText("");
-            a72.setEnabled(true); a72.setText("");
-            a73.setEnabled(true); a73.setText("");
-            a74.setEnabled(true); a74.setText("");
-            a75.setEnabled(true); a75.setText("");
-            a76.setEnabled(true); a76.setText(""); 
-            a77.setEnabled(true); a77.setText("");
-            a78.setEnabled(false); a78.setText("");
-            a81.setEnabled(false); a81.setText("");
-            a82.setEnabled(false); a82.setText("");
-            a83.setEnabled(false); a83.setText("");
-            a84.setEnabled(false); a84.setText("");
-            a85.setEnabled(false); a85.setText("");
-            a86.setEnabled(false); a86.setText("");
-            a87.setEnabled(false); a87.setText("");
-            a88.setEnabled(false); a88.setText("");
-        }
-        else if (matrixSize.getSelectedItem() == "8x8") {
-            a11.setText("");
-            a12.setText("");
-            a21.setText("");
-            a22.setText("");
-            a13.setEnabled(true); a13.setText("");
-            a14.setEnabled(true); a14.setText("");
-            a15.setEnabled(true); a15.setText("");
-            a16.setEnabled(true); a16.setText(""); 
-            a17.setEnabled(true); a27.setText("");
-            a18.setEnabled(true); a28.setText("");
-            a23.setEnabled(true); a23.setText("");
-            a24.setEnabled(true); a24.setText("");
-            a25.setEnabled(true); a25.setText("");
-            a26.setEnabled(true); a26.setText(""); 
-            a27.setEnabled(true); a27.setText("");
-            a28.setEnabled(true); a28.setText("");
-            a31.setEnabled(true); a31.setText("");
-            a32.setEnabled(true); a32.setText("");
-            a33.setEnabled(true); a33.setText("");
-            a34.setEnabled(true); a34.setText("");
-            a35.setEnabled(true); a35.setText("");
-            a36.setEnabled(true); a36.setText("");
-            a37.setEnabled(true); a37.setText("");
-            a38.setEnabled(true); a38.setText("");
-            a41.setEnabled(true); a41.setText(""); 
-            a42.setEnabled(true); a42.setText("");
-            a43.setEnabled(true); a43.setText("");
-            a44.setEnabled(true); a44.setText("");
-            a45.setEnabled(true); a45.setText("");
-            a46.setEnabled(true); a46.setText("");
-            a47.setEnabled(true); a47.setText("");
-            a48.setEnabled(true); a48.setText("");
-            a51.setEnabled(true); a51.setText("");
-            a52.setEnabled(true); a52.setText("");
-            a53.setEnabled(true); a53.setText("");
-            a54.setEnabled(true); a54.setText("");
-            a55.setEnabled(true); a55.setText("");
-            a56.setEnabled(true); a56.setText("");
-            a57.setEnabled(true); a57.setText("");
-            a58.setEnabled(true); a58.setText("");
-            a61.setEnabled(true); a61.setText("");
-            a62.setEnabled(true); a62.setText("");
-            a63.setEnabled(true); a63.setText("");
-            a64.setEnabled(true); a64.setText(""); 
-            a65.setEnabled(true); a65.setText("");
-            a66.setEnabled(true); a66.setText(""); 
-            a67.setEnabled(true); a67.setText("");
-            a68.setEnabled(true); a68.setText("");
-            a71.setEnabled(true); a71.setText("");
-            a72.setEnabled(true); a72.setText("");
-            a73.setEnabled(true); a73.setText(""); 
-            a74.setEnabled(true); a74.setText("");
-            a75.setEnabled(true); a75.setText("");
-            a76.setEnabled(true); a76.setText("");
-            a77.setEnabled(true); a77.setText("");
-            a78.setEnabled(true); a78.setText("");
-            a81.setEnabled(true); a81.setText("");
-            a82.setEnabled(true); a82.setText("");
-            a83.setEnabled(true); a83.setText("");
-            a84.setEnabled(true); a84.setText("");
-            a85.setEnabled(true); a85.setText("");
-            a86.setEnabled(true); a86.setText("");
-            a87.setEnabled(true); a87.setText("");
-            a88.setEnabled(true); a88.setText("");
         }
     }//GEN-LAST:event_matrixSizeActionPerformed
 
@@ -1783,9 +2180,9 @@ public class MatrixView extends javax.swing.JFrame {
         a88.setText("");
         result.setText("");
     }//GEN-LAST:event_clearActionPerformed
-
+    
     private void determinantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_determinantActionPerformed
-        det = get_determinant();
+        det = Controller.getDeterminant(this);
         result.setText(Double.toString(det));
     }//GEN-LAST:event_determinantActionPerformed
 
@@ -1817,41 +2214,6 @@ public class MatrixView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_resultActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MatrixView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MatrixView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MatrixView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MatrixView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MatrixView().setVisible(true);
-            }
-        });
-    }
     private double det;
     private double[][] matrix;
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -34,7 +34,7 @@ public final class SquareMatrixOperations {
         return minor;
     }
     //если матрица очень большая, алгебраическое дополнение не найдется/потратится дохуя времени...
-    static double algebraic_complement(double[][] matrix, int numberOfRow, int numberOfColumn) {
+    static double algebraicComplement(double[][] matrix, int numberOfRow, int numberOfColumn) {
         int coefficient;
         if((numberOfRow+numberOfColumn) % 2 == 1){
             coefficient = -1;
@@ -42,10 +42,10 @@ public final class SquareMatrixOperations {
         else {
             coefficient = 1;
         }
-        return (coefficient * find_determinant(get_minor(matrix,numberOfRow,numberOfColumn)));
+        return (coefficient * findDeterminant(get_minor(matrix,numberOfRow,numberOfColumn)));
     }
     //по ходу это для онли квадратных матриц, TODO: простестировать работает ли для неквадратных матриц
-    static double[][] matrix_to_diagonal_view(double[][] matrix) {
+    static double[][] matrixToDiagonalView(double[][] matrix) {
       double[][] resultMatrix = matrix;
       final int matrixSize = matrix.length;
         for (int i = 0; i < matrixSize; i++) {
@@ -57,10 +57,11 @@ public final class SquareMatrixOperations {
                 }
             }
         }
+
         return resultMatrix;
     }
 
-    static double find_determinant(double[][] matrix) {
+    static double findDeterminant(double[][] matrix) {
         double det = 0;
         final int matrixSize = matrix.length;
         if (matrixSize == 2) {
@@ -80,13 +81,13 @@ public final class SquareMatrixOperations {
             for (int j = 0; j < matrixSize; j++) {
                 double[][] triangleMatrix;
                 triangleMatrix = matrix;
-                triangleMatrix = matrix_to_diagonal_view(triangleMatrix);
+                triangleMatrix = matrixToDiagonalView(triangleMatrix);
                 det *= triangleMatrix[j][j];
             }
         }
         else {
             for (int j = 0; j < matrixSize; j++) {
-                det += matrix[0][j] * algebraic_complement(matrix, 0, j);
+                det += matrix[0][j] * algebraicComplement(matrix, 0, j);
             }
 
         }
