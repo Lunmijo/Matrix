@@ -50,7 +50,10 @@ public final class SquareMatrixOperations {
       final int matrixSize = matrix.length;
         for (int i = 0; i < matrixSize; i++) {
             for (int j = i + 1; j < matrixSize; j++) { //тут j = i+1 потому что мы первый рядок не трогаем (зачем? там все элементы как есть
-                double coefficient = matrix[j][i] / matrix[i][i]; //коэффициент для домножения элемента
+                double coefficient = 1; //если элемент равен нулю, вообще домножать ничего не надо - все готово 
+                if (matrix[i][i] != 0) {
+                    coefficient = matrix[j][i] / matrix[i][i]; //коэффициент для домножения элемента
+                         }
                 for (int k = i; k < matrixSize; k++) {
 //проходимся по всем элементам столбца, следующими после i+1, таким образом матрица приводится к виду что с одной половины мэйн диагонали один нули
                     resultMatrix[j][k] = matrix[j][k] - coefficient * matrix[i][k];
