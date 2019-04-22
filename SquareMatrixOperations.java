@@ -32,7 +32,7 @@ public final class SquareMatrixOperations {
         }
         return minor;
     }
-    //если матрица очень большая, алгебраическое дополнение не найдется/потратится дохуя времени...
+    //если матрица очень большая, алгебраическое дополнение не найдется/потратится предельно много времени...
     static double algebraic_complement(double[][] matrix, int numberOfRow, int numberOfColumn) {
         int coefficient;
         if((numberOfRow+numberOfColumn) % 2 == 1){
